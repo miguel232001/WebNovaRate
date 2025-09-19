@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaRate - Valora películas y series</title>
-    <link rel="stylesheet" href="estilo/index.css">
+    <title>NovaRate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-<body>
+<body class="gradient-bg">
     <div class="container">
-        <!-- Logo central -->
-        <img src="images/novalogo.png" alt="NovaRate Logo" class="logo">
+        <!-- Logo -->
+        <img src="{{ url_for('static', filename='novalogo.png') }}" alt="NovaRate Logo" class="logo">
 
-        <!-- Título con sombra -->
-        <h1 class="title">NovaRate</h1>
+        <!-- Título -->
+        <h1>NovaRate</h1>
+        <h2>Valora películas y series con estilo</h2>
 
-        <!-- Lema con sombra -->
-        <p class="tagline">Valora películas y series con estilo</p>
-
-        <!-- Botón retro con borde neón y fondo translúcido -->
-        <button id="startButton" class="neon-button">
-            <span class="button-icon">🎬</span> Comenzar
-        </button>
+        <!-- Botón que redirige al login -->
+        <form action="{{ url_for('login') }}">
+            <button type="submit" class="btn-start">🎬 Comenzar</button>
+        </form>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

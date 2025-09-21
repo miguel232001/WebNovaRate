@@ -3,18 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - NovaRate</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Iniciar Sesión - NovaRate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo/login.css') }}">
 </head>
-<body class="gradient-bg">
-    <div class="container">
-        <h1>Iniciar Sesión</h1>
-        <form method="post">
-            <input type="text" name="usuario" placeholder="Usuario o Email" required>
-            <input type="password" name="password" placeholder="Contraseña" required>
-            <button type="submit" class="btn-start">Entrar</button>
+<body>
+    <div class="login-container">
+        <!-- Título -->
+        <h1 class="login-title">Iniciar Sesión</h1>
+
+        <!-- Formulario -->
+        <form method="POST" action="{{ url_for('login') }}">
+            <!-- Usuario -->
+            <input type="text" name="usuario" placeholder="Usuario" class="input-box" required>
+
+            <!-- Contraseña -->
+            <input type="password" name="contrasena" placeholder="Contraseña" class="input-box" required>
+
+            <!-- Botón login -->
+            <button type="submit" class="btn-login">🚀 Entrar</button>
         </form>
-        <a href="#">¿Olvidaste tu contraseña?</a>
+
+        <!-- Enlaces extras -->
+        <p class="extra-link">
+            <a href="{{ url_for('register') }}">¿No tienes cuenta?</a>
+        </p>
+        <p class="extra-link">
+            <a href="{{ url_for('forgot_password') }}">¿Olvidaste tu contraseña?</a>
+        </p>
     </div>
 </body>
 </html>
+

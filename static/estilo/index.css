@@ -1,82 +1,63 @@
-body, html {
+body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100%;
-}
-
-/* Fondo degradado */
-.gradient-bg {
-    background: linear-gradient(to bottom,
-        #0b0c0e 0%,
-        #0984b1 25%,
-        #24d0f1 50%,
-        #f07c3e 75%,
-        #d34a29 100%);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* Fondo degradado como en tu app MAUI */
+    background: linear-gradient(to bottom, #0b0c0e, #0984b1, #24d0f1, #f07c3e, #d34a29);
+    font-family: Arial, sans-serif;
+    color: white;
 }
 
-/* Contenedor */
+/* Contenedor central */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    padding: 20px;
+    gap: 25px;
 }
 
 /* Logo */
 .logo {
-    height: 180px;
+    width: 200px;
+    margin-bottom: 15px;
 }
 
-/* Títulos */
-h1 {
+/* Título principal */
+.titulo {
     font-size: 70px;
     font-weight: bold;
     text-shadow: 2px 2px 4px black;
+    margin: 0;
 }
 
-h2 {
-    font-size: 21px;
-    text-shadow: 2px 2px 3px black;
-}
-
-/* Botón principal */
-.btn-start {
-    font-size: 30px;
-    padding: 15px;
-    width: 220px;
-    border-radius: 20px;
-    border: 2px solid #24d0f1;
-    background-color: rgba(0,0,0,0.3);
+/* Subtítulo */
+.subtitulo {
+    font-size: 22px;
     color: #24d0f1;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    text-shadow: 1px 1px 3px black;
+    margin-bottom: 30px;
 }
 
-.btn-start:hover {
+/* Botón retro */
+.boton {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #24d0f1;
+    border: 2px solid #24d0f1;
+    border-radius: 20px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.boton:hover {
     background-color: #24d0f1;
     color: black;
 }
 
-/* Inputs del login */
-form input {
-    display: block;
-    margin: 10px auto;
-    padding: 12px;
-    width: 250px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-}
-
-form button {
-    margin-top: 10px;
-}

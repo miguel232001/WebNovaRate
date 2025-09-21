@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.11 (WebNovaRate)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (WebNovaRate)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (WebNovaRate)" project-jdk-type="Python SDK" />
 </project>

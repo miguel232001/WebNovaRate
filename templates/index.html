@@ -2,23 +2,25 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovaRate</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo/index.css') }}?v=1">
 </head>
-<body class="gradient-bg">
+<body>
     <div class="container">
+
         <!-- Logo -->
-        <img src="{{ url_for('static', filename='novalogo.png') }}" alt="NovaRate Logo" class="logo">
+        <img src="{{ url_for('static', filename='images/novalogo.png') }}"
+             alt="Logo NovaRate" class="logo">
 
         <!-- Título -->
-        <h1>NovaRate</h1>
-        <h2>Valora películas y series con estilo</h2>
+        <h1 class="titulo">NovaRate</h1>
 
-        <!-- Botón que redirige al login -->
-        <form action="{{ url_for('login') }}">
-            <button type="submit" class="btn-start">🎬 Comenzar</button>
-        </form>
+        <!-- Subtítulo -->
+        <p class="subtitulo">Valora películas y series con estilo</p>
+
+        <!-- Botón -->
+        <a href="{{ url_for('login') }}" class="boton">🎬 Comenzar</a>
     </div>
 </body>
 </html>
+

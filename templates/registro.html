@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro - NovaRate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo/registro.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Crear cuenta</h1>
+
+        <form method="POST" action="{{ url_for('register') }}">
+            <!-- Usuario -->
+            <input type="text" name="usuario" placeholder="Usuario" required>
+
+            <!-- Correo -->
+            <input type="email" name="correo" placeholder="Correo electrónico" required>
+
+            <!-- Contraseña -->
+            <input type="password" name="password" placeholder="Contraseña" required>
+
+            <!-- Confirmar contraseña -->
+            <input type="password" name="confirm_password" placeholder="Confirmar contraseña" required>
+
+            <!-- Botón -->
+            <button type="submit">Registrarse</button>
+        </form>
+
+        <p>¿Ya tienes cuenta? <a href="{{ url_for('login') }}">Inicia sesión aquí</a></p>
+    </div>
+</body>
+</html>

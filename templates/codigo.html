@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Activación de Cuenta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo/codigo.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔑 Activación de Cuenta</h1>
+
+        <!-- Nombre de usuario (bloqueado como en MAUI) -->
+        <input type="text" value="{{ usuario }}" readonly class="entrada" />
+
+        <!-- Código de activación -->
+        <form method="POST">
+            <input type="text" name="codigo" placeholder="Código de activación" class="entrada" required>
+            <button type="submit" class="boton">Confirmar</button>
+        </form>
+
+        <p class="info">Introduce el código que recibiste por correo para activar tu cuenta.</p>
+
+        <!-- Mensajes flash -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="mensajes">
+              {% for category, message in messages %}
+                <p class="{{ category }}">{{ message }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

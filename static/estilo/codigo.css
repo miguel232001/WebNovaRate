@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #0b0c0e, #0984b1, #24d0f1, #f07c3e, #d34a29);
+    color: #F9E79F;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 80px auto;
+    background-color: rgba(15, 15, 20, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.entrada {
+    width: 100%;
+    height: 45px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #1F2833;
+    color: white;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.entrada[readonly] {
+    opacity: 0.7;
+}
+
+.boton {
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    background-color: #0B3D91;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #1E5BBE;
+}
+
+.info {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #F9E79F;
+}
+
+.mensajes p {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.success {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.error {
+    background-color: #e74c3c;
+    color: white;
+}
